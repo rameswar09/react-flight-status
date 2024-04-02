@@ -6,7 +6,7 @@ const Header = () => {
     if(window.location.pathname==='/'){
         navigate("/flight-list");
     }
-  }, []);
+  });
   return <div>header da</div>;
 };
 

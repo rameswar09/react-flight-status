@@ -16,7 +16,7 @@ const FlightDetails = () => {
         console.log(err);
       }
     })();
-  }, []);
+  }, [id]);
   return (
     <div>{`${flightData.id}-${flightData.flightNumber}-${flightData.status}`}</div>
   );
