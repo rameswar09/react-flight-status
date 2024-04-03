@@ -1,11 +1,15 @@
-import React, {Fragment } from "react";
+import React, { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Components/AppWrapper/Header";
+import ErrorBoundary from "./Components/ErrorBoundary";
+import "./App.css";
 const App = () => {
   return (
     <Fragment>
-      <Header />
-      <Outlet />
+      <ErrorBoundary>
+        <Header />
+        <Outlet />
+      </ErrorBoundary>
     </Fragment>
   );
 };
