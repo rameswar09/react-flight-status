@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { axiosApiCall } from "../../Services/axiosCall";
+import { Link } from "react-router-dom";
 
 import "../../css/flight.css";
 
@@ -48,14 +49,14 @@ const FlightList = () => {
           {each.status}
         </td>
         <td>
-          <a
-            href={`${window.location.origin}/flight-details/${each.id}`}
-            style={{ textDecoration: "none" }}
+          <Link
+            to={`/flight-details/${each.id}`}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
           >
             View
-          </a>
+          </Link>
         </td>
       </tr>
       // <p
